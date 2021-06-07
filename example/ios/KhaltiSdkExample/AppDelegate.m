@@ -55,6 +55,7 @@ static void InitializeFlipper(UIApplication *application) {
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+//    Khalti.shared.action(with: url);
     Khalti.shared.appUrlScheme = KhaltiAppScheme;
     return YES;
 }
