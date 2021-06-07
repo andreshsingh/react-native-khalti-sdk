@@ -1,18 +1,44 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Button } from 'react-native';
 import KhaltiSdk from 'react-native-khalti-sdk';
 
-export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+const merchantKey = 'test_public_key_1d57e4d159794c6790a62f8953124053';
+const productName = 'testProduct';
+const productId = '10001';
+const productUrl = 'http://google.com';
+const amount = 1000;
+const ebankingPayment = true;
+const additionalData = {
+  merchant_author: 'Andresh Singh'
+}
 
-  React.useEffect(() => {
-    KhaltiSdk.multiply(3, 7).then(setResult);
-  }, []);
+export default function App() {
+
+  const _startKhaltiSdk = async () => {
+    try {
+      console.log('start')
+      const result = await KhaltiSdk.startKhaltiSdk(
+        merchantKey,
+        productName,
+        productId,
+        productUrl,
+        amount,
+        ebankingPayment,
+        additionalData
+      );
+      console.log({ result })
+    } catch (e) {
+      console.log({ e })
+    }
+  }
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button
+        title={'Start Khalti Sdk'}
+        onPress={_startKhaltiSdk}
+      />
     </View>
   );
 }

@@ -29,10 +29,13 @@ static void InitializeFlipper(UIApplication *application) {
 }
 #endif
 
+#import <Khalti/Khalti-Swift.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  Khalti.shared.appUrlScheme = KhaltiAppScheme;
   #ifdef FB_SONARKIT_ENABLED
     InitializeFlipper(application);
   #endif
@@ -50,6 +53,12 @@ static void InitializeFlipper(UIApplication *application) {
   [self.window makeKeyAndVisible];
   return YES;
 }
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    Khalti.shared.appUrlScheme = KhaltiAppScheme;
+    return YES;
+}
+
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
