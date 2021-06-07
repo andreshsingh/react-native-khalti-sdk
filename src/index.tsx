@@ -1,7 +1,15 @@
 import { NativeModules } from 'react-native';
 
 type KhaltiSdkType = {
-  multiply(a: number, b: number): Promise<number>;
+  startKhaltiSdk(
+    merchantKey: string,
+    productName: string,
+    productId: string,
+    productUrl: string,
+    amount: number,
+    ebankingPayment: boolean,
+    additionalData: object
+  ): void;
 };
 
 const { KhaltiSdk } = NativeModules;
