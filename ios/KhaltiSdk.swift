@@ -51,12 +51,12 @@ class KhaltiSdk: NSObject, KhaltiPayDelegate {
     func onCheckOutError(action: String, message: String, data: Dictionary<String, Any>?) {
         debugPrint("Khalti SDK payment error")
         debugPrint(message)
-        if let value = data {
-            print(value)
-        }
+        // if let value = data {
+        //     print(value)
+        // }
 
-        let error = NSError(domain: "Esewa Error", code: 101, userInfo: data)
-        rejectCallback!("action", message, error)
+        // let error = NSError(domain: "Esewa Error", code: 101, userInfo: data)
+        // rejectCallback!("action", message, error)
     }
 
 }

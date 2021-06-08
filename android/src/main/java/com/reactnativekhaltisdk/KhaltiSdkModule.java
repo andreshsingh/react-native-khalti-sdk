@@ -3,6 +3,7 @@ package com.reactnativekhaltisdk;
 import androidx.annotation.NonNull;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -44,6 +45,7 @@ public class KhaltiSdkModule extends ReactContextBaseJavaModule {
     Config eBankingConfig = new Config.Builder(public_key, product_id, product_name, amount.longValue(), new OnCheckOutListener() {
       @Override
       public void onError(@NonNull String action, @NonNull Map<String, String> errorMap) {
+        Log.e("Khalti", String.valueOf(errorMap));
 //           promise.reject("PAYMENT_ERROR", "Payment was unsuccessful");
       }
 
