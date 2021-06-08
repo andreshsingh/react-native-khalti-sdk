@@ -1,3 +1,5 @@
+![banner](https://user-images.githubusercontent.com/30138390/121176798-5c999100-c87c-11eb-95f7-a9532f42972d.png)
+
 # react-native-khalti-sdk
 
 react-native wrapper for khalti iOS and android sdks.
