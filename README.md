@@ -10,6 +10,7 @@ To run the example clone the repo, go to the example folder, yarn , pod install 
 ```sh
 npm install react-native-khalti-sdk
 ```
+or
 ```sh
 yarn add react-native-khalti-sdk
 ```
