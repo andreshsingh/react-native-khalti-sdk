@@ -129,5 +129,6 @@ dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   // implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation 'com.google.code.gson:gson:2.8.7'
   implementation("com.khalti:khalti-android:$latest_version")
 }
