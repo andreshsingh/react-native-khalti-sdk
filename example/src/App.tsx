@@ -10,14 +10,13 @@ const productUrl = 'http://google.com';
 const amount = 1000;
 const ebankingPayment = true;
 const additionalData = {
-  merchant_author: 'Andresh Singh'
-}
+  merchant_author: 'Andresh Singh',
+};
 
 export default function App() {
-
   const _startKhaltiSdk = async () => {
     try {
-      console.log('start')
+      console.log('start');
       const result = await KhaltiSdk.startKhaltiSdk(
         merchantKey,
         productName,
@@ -27,18 +26,15 @@ export default function App() {
         ebankingPayment,
         additionalData
       );
-      console.log({ result })
+      console.log({ result });
     } catch (e) {
-      console.log({ e })
+      console.log({ e });
     }
-  }
+  };
 
   return (
     <View style={styles.container}>
-      <Button
-        title={'Start Khalti Sdk'}
-        onPress={_startKhaltiSdk}
-      />
+      <Button title={'Start Khalti Sdk'} onPress={_startKhaltiSdk} />
     </View>
   );
 }

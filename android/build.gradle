@@ -33,9 +33,9 @@ android {
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -123,8 +123,13 @@ repositories {
 
 def kotlin_version = getExtOrDefault('kotlinVersion')
 
+def latest_version = getExtOrDefault('latestVersion')
+
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+  implementation("com.khalti:khalti-android:$latest_version") {
+        transitive = true
+  }
 }
