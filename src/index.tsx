@@ -8,7 +8,8 @@ type KhaltiSdkType = {
     productUrl: string,
     amount: number,
     ebankingPayment: boolean,
-    additionalData: object
+    additionalData: object,
+    KhaltiAppScheme: string | null
   ): void;
 };
 

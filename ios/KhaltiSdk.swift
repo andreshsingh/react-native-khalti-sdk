@@ -20,6 +20,7 @@ class KhaltiSdk: NSObject, KhaltiPayDelegate {
         amount: NSNumber,
         ebankingPayment: Bool,
         additionalData: NSDictionary,
+        KhaltiAppScheme: String,
         resolver resolve: @escaping RCTPromiseResolveBlock,
         rejector reject: @escaping RCTPromiseRejectBlock
     ) -> Void {
@@ -34,6 +35,8 @@ class KhaltiSdk: NSObject, KhaltiPayDelegate {
         debugPrint("amount: \(amount)")
         debugPrint("ebankingPayment: \(ebankingPayment)")
         debugPrint("additionalData: \(additionalData)")
+
+        Khalti.shared.appUrlScheme = KhaltiAppScheme;
 
         let khaltiConfig:Config = Config(publicKey: merchantKey, amount: Int(truncating: amount), productId: productId, productName: productName, productUrl: productUrl,additionalData: additionalData as? Dictionary<String, String>, ebankingPayment: ebankingPayment)
 
