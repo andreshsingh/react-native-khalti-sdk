@@ -29,8 +29,6 @@ static void InitializeFlipper(UIApplication *application) {
 }
 #endif
 
-#import <Khalti/Khalti-Swift.h>
-
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -52,12 +50,6 @@ static void InitializeFlipper(UIApplication *application) {
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
   return YES;
-}
-
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-//    Khalti.shared.action(with: url);
-    Khalti.shared.appUrlScheme = KhaltiAppScheme;
-    return YES;
 }
 
 
