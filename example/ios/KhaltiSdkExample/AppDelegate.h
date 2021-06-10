@@ -8,8 +8,6 @@
 #import <React/RCTBridgeDelegate.h>
 #import <UIKit/UIKit.h>
 
-static NSString *KhaltiAppScheme = @"KhaltiPayExampleScheme";
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate, RCTBridgeDelegate>
 
 @property (nonatomic, strong) UIWindow *window;

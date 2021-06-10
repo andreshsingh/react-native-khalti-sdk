@@ -12,6 +12,7 @@ const ebankingPayment = true;
 const additionalData = {
   merchant_author: 'Andresh Singh',
 };
+const KhaltiAppScheme = 'KhaltiPayExampleScheme';
 
 export default function App() {
   const _startKhaltiSdk = async () => {
@@ -24,7 +25,8 @@ export default function App() {
         productUrl,
         amount,
         ebankingPayment,
-        additionalData
+        additionalData,
+        KhaltiAppScheme
       );
       console.log({ result });
     } catch (e) {
