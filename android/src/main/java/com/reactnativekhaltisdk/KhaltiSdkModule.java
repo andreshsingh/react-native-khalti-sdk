@@ -40,7 +40,7 @@ public class KhaltiSdkModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void startKhaltiSdk(String public_key, String product_name, String product_id, String product_url, Double amount, Boolean eBanking, ReadableMap additional_data, Promise promise) {
+  public void startKhaltiSdk(String public_key, String product_name, String product_id, String product_url, Double amount, ReadableMap additional_data, String KhaltiAppScheme, Promise promise) {
 
     Config eBankingConfig = new Config.Builder(public_key, product_id, product_name, amount.longValue(), new OnCheckOutListener() {
       @Override
@@ -72,9 +72,6 @@ public class KhaltiSdkModule extends ReactContextBaseJavaModule {
     })
       .paymentPreferences(new ArrayList<PaymentPreference>() {{
         add(PaymentPreference.KHALTI);
-        if (eBanking) {
-          add(PaymentPreference.EBANKING);
-        }
       }})
       .additionalData(additional_data.toHashMap())
       .productUrl(product_url)

@@ -8,7 +8,7 @@ type KhaltiSdkType = {
     productUrl: string,
     amount: number,
     additionalData: object,
-    KhaltiAppScheme: string | null
+    KhaltiAppScheme: string
   ): void;
 };
 
