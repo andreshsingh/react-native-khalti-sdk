@@ -1,6 +1,6 @@
 {
   "name": "react-native-khalti-sdk",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "react-native wrapper for khalti iOS and android sdks",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
