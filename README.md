@@ -2,7 +2,7 @@
 
 # react-native-khalti-sdk
 
-react-native wrapper for khalti iOS and android sdks.
+React-native wrapper for khalti iOS and android sdks. Currently this sdk only supports payment through khalti.
 
 ## example
 To run the example clone the repo, go to the example folder, yarn , pod install and yarn ios/android.
@@ -57,8 +57,10 @@ in the application section.
 
 ## iOS
 ### Step 1
-install [cocoapods-user-defined-build-types](https://github.com/joncardasis/cocoapods-user-defined-build-types)
+Add url scheme as "KhaltiPayExampleScheme" in the URL types section.
 ### Step 2
+install [cocoapods-user-defined-build-types](https://github.com/joncardasis/cocoapods-user-defined-build-types)
+### Step 3
 Add the following in your podfile (see example ios for reference)
 ```
 plugin 'cocoapods-user-defined-build-types'
@@ -84,8 +86,8 @@ import KhaltiSdk from "react-native-khalti-sdk";
         productId,
         productUrl,
         amount,
-        ebankingPayment,
-        additionalData
+        additionalData,
+        'KhaltiPayExampleScheme'
       );
       console.log({ result });
     } catch (e) {
