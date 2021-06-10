@@ -1,6 +1,6 @@
 {
   "name": "react-native-khalti-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-native wrapper for khalti iOS and android sdks",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -34,7 +34,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "Khalti",
+    "khalti-react-native",
+    "khalti-ios",
+    "khalti-android"
   ],
   "repository": "https://github.com/andreshsingh/react-native-khalti-sdk",
   "author": "andreshsingh <singhandresh09@gmail.com> (https://github.com/andreshsingh)",
