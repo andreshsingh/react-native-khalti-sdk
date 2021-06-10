@@ -46,6 +46,7 @@ Create a folder named **xml** inside the res folder of android and add a file wi
 #### Step 2
 Then goto the manifest.xml and add
 ```
+android:allowBackup="true"
 android:networkSecurityConfig="@xml/network_security_config"
 ```
 in the application section.
