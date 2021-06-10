@@ -8,7 +8,6 @@ const productName = 'testProduct';
 const productId = '10001';
 const productUrl = 'http://google.com';
 const amount = 1000;
-const ebankingPayment = true;
 const additionalData = {
   merchant_author: 'Andresh Singh',
 };
@@ -24,7 +23,6 @@ export default function App() {
         productId,
         productUrl,
         amount,
-        ebankingPayment,
         additionalData,
         KhaltiAppScheme
       );

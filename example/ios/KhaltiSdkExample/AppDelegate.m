@@ -33,7 +33,6 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  Khalti.shared.appUrlScheme = KhaltiAppScheme;
   #ifdef FB_SONARKIT_ENABLED
     InitializeFlipper(application);
   #endif

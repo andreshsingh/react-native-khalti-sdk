@@ -8,8 +8,8 @@ RCT_EXTERN_METHOD(
                     productId:(NSString *)productId
                     productUrl:(NSString *)productUrl
                     amount:(nonnull NSNumber *)amount
-                    ebankingPayment:(BOOL *)ebankingPayment
                     additionalData:(NSDictionary *)additionalData
+                    KhaltiAppScheme:(NSString *)KhaltiAppScheme
                     resolver: (RCTPromiseResolveBlock)resolve
                     rejector: (RCTPromiseRejectBlock)reject
                   );
