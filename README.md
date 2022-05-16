@@ -102,6 +102,12 @@ height=50
 raw=true
 alt="Bhuwan GOD Kandel"
 style="border-radius: 40px;margin-top:10px" ></a>
+<a href="https://github.com/aashan10" target="_blank"><img src="https://avatars.githubusercontent.com/u/18713900?v=4"
+width=50
+height=50
+raw=true
+alt="Aashan Ghimire"
+style="border-radius: 40px;margin-top:10px" ></a>
 
 ## License
 
