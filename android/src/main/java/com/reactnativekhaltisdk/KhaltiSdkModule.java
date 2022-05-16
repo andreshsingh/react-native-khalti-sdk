@@ -18,6 +18,7 @@ import com.khalti.checkout.helper.Config;
 import com.khalti.checkout.helper.KhaltiCheckOut;
 import com.khalti.checkout.helper.PaymentPreference;
 import com.khalti.checkout.helper.OnCheckOutListener;
+import com.khalti.checkout.helper.OnCancelListener;
 
 import java.util.List;
 import java.util.Map;
@@ -73,6 +74,12 @@ public class KhaltiSdkModule extends ReactContextBaseJavaModule {
       .paymentPreferences(new ArrayList<PaymentPreference>() {{
         add(PaymentPreference.KHALTI);
       }})
+      .onCancel(new OnCancelListener() {
+        @Override
+        public void onCancel() {
+          promise.reject("PAYMENT_CANCELED", "Payment cancelled by the user");
+        }
+      })
       .additionalData(additional_data.toHashMap())
       .productUrl(product_url)
       .build();
