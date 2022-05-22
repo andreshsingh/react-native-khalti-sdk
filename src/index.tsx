@@ -18,7 +18,7 @@ type KhaltiSdkType = {
     amount: number,
     additionalData: object,
     KhaltiAppScheme: string
-  ): KhaltiResponse;
+  ): Promise<KhaltiResponse>;
 };
 
 const { KhaltiSdk } = NativeModules;
